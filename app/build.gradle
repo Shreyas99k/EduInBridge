@@ -1,0 +1,58 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.google.services)
+}
+
+android {
+    namespace 'com.example.eduinsight'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.eduinsight"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+
+    // Lottie Library
+    implementation libs.lottie
+
+    // Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    // Firebase
+    implementation platform(libs.firebase.bom)
+    implementation libs.firebase.messaging
+    
+    // Gemini AI and Guava
+    implementation libs.gemini.ai
+    implementation libs.guava
+
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}

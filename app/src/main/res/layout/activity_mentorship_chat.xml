@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Header Area -->
+    <View
+        android:id="@+id/headerShadow"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0DFFFFFF"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:navigationIconTint="#FFFFFF"
+        app:titleTextColor="#FFFFFF" />
+
+    <View
+        android:id="@+id/toolbarLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="#33FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <!-- Session Context Header -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#4DFFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/toolbarLine">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/glass_doubt_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SESSION CONTEXT"
+                android:textColor="#9D7BFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"/>
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Loading session details..."
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingMultiplier="1.1"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Shimmer Loading Overlay -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:shimmer_auto_start="true"
+        app:shimmer_base_alpha="0.2"
+        app:shimmer_highlight_alpha="0.4"
+        app:shimmer_duration="1200"
+        app:layout_constraintBottom_toTopOf="@id/inputArea"
+        app:layout_constraintTop_toBottomOf="@id/cardQuestion">
+        <include layout="@layout/layout_chat_shimmer" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <!-- Chat Stream -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:visibility="gone"
+        android:layoutAnimation="@anim/layout_animation_slide_up"
+        app:layout_constraintBottom_toTopOf="@id/inputArea"
+        app:layout_constraintTop_toBottomOf="@id/cardQuestion" />
+
+    <!-- Dim Overlay for Contextual Menu -->
+    <View
+        android:id="@+id/dimOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3000000"
+        android:visibility="gone"
+        android:alpha="0"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Floating Input Island -->
+    <LinearLayout
+        android:id="@+id/inputArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="20dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Floating Reply Preview -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/layoutReply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#33FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:background="#9D7BFF"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txtReplyUserHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#9D7BFF"
+                        android:textStyle="bold"
+                        android:textSize="11sp"/>
+                    <TextView
+                        android:id="@+id/txtReplyMsgPreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnCancelReply"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    app:tint="#FFFFFF"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Main Input Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1.5dp"
+                app:strokeColor="#4DFFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/glass_bubble_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="12dp">
+
+                    <ImageButton
+                        android:id="@+id/btnAttach"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@android:drawable/ic_menu_gallery"
+                        app:tint="#FFFFFF" />
+
+                    <EditText
+                        android:id="@+id/editMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="Message..."
+                        android:padding="14dp"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#80FFFFFF"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:inputType="textMultiLine"
+                        android:maxLines="4"/>
+
+                    <ImageButton
+                        android:id="@+id/btnMic"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@android:drawable/ic_btn_speak_now"
+                        app:tint="#FFFFFF" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@android:drawable/ic_menu_send"
+                app:backgroundTint="#9D7BFF"
+                app:tint="#FFFFFF"
+                app:fabSize="normal"
+                app:elevation="4dp" />
+
+            <!-- Lottie Send Animation Layer -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieSendAnimation"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="-60dp"
+                android:visibility="gone"
+                app:lottie_rawRes="@raw/success_tick"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

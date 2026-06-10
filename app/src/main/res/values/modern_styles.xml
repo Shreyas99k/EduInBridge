@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Modern Button Style -->
+    <style name="ModernButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="elevation">0dp</item>
+        <item name="backgroundTint">@color/accent_primary</item>
+        <item name="android:paddingHorizontal">24dp</item>
+        <item name="android:paddingVertical">12dp</item>
+    </style>
+
+    <!-- Modern Card Style -->
+    <style name="ModernCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/bg_dark_secondary</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/glass_white_20</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Modern TextInputLayout Style -->
+    <style name="ModernTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/accent_primary</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxBackgroundColor">@color/bg_dark</item>
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:textColorHint">@color/text_white_50</item>
+    </style>
+
+    <!-- Modern TextView Title -->
+    <style name="ModernTitleText">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <!-- Modern Subtitle -->
+    <style name="ModernSubtitleText">
+        <item name="android:textColor">@color/accent_primary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
+    <!-- Modern Label -->
+    <style name="ModernLabelText">
+        <item name="android:textColor">@color/text_white_70</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.12</item>
+    </style>
+
+    <!-- Modern FAB -->
+    <style name="ModernFAB" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/accent_primary</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="elevation">8dp</item>
+    </style>
+
+</resources>

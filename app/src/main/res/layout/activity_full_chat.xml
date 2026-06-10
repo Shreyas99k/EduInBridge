@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B141A"> <!-- WhatsApp Dark Mode background -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarChat"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#202C33"
+        app:titleTextColor="#FFFFFF" />
+
+    <!-- Doubt Header (Question on Top) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardQuestionHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarChat"
+        android:layout_margin="12dp"
+        app:cardBackgroundColor="#202C33"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student Question"
+                android:textColor="#00E676"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:alpha="0.8"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#33FFFFFF"
+                android:layout_marginVertical="8dp"/>
+
+            <TextView
+                android:id="@+id/txtChatQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading question..."
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFullChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/inputArea"
+        android:layout_below="@id/cardQuestionHeader"
+        android:clipToPadding="false"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:id="@+id/inputArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#202C33">
+
+        <ImageButton
+            android:id="@+id/btnChatAttach"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:tint="#8696A0" />
+
+        <EditText
+            android:id="@+id/editChatMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ultra_glass_bg"
+            android:hint="Type a solution..."
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#8696A0"
+            android:textSize="15sp"
+            android:layout_marginHorizontal="8dp"/>
+
+        <!-- THE MIC BUTTON FIXED: ID matched with Java code -->
+        <ImageButton
+            android:id="@+id/btnChatMic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_btn_speak_now"
+            app:tint="#8696A0" />
+
+        <ImageButton
+            android:id="@+id/btnChatSend"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/status_pill_solved"
+            android:backgroundTint="#00A884"
+            android:src="@android:drawable/ic_menu_send"
+            app:tint="#FFFFFF" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="12dp"
+    app:strokeColor="#F1F5F9"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="#E2E8F0"
+            android:backgroundTint="#CBD5E1" />
+
+        <TextView
+            android:id="@+id/txtSearchTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Institution"
+            android:textColor="#0F172A"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-black"
+            android:layout_gravity="start"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Trendy Search Bar -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            app:boxBackgroundMode="none"
+            app:startIconDrawable="@android:drawable/ic_menu_search"
+            app:startIconTint="#6366F1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editSearchQuery"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_search_bg"
+                android:hint="Search your school..."
+                android:textColor="#0F172A"
+                android:paddingStart="48dp"
+                android:paddingEnd="16dp"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearchList"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="16dp"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelSearch"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="CLOSE"
+            android:textColor="#64748B"
+            android:textStyle="bold"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

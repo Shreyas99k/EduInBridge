@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    <!-- Outer Bloom -->
+    <path android:pathData="M40,40m-35,0a35,35 0,1 1,70 0a35,35 0,1 1,-70 0">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="radial" android:centerX="40" android:centerY="40" android:gradientRadius="35">
+                <item android:color="#1A9D7BFF" android:offset="0" />
+                <item android:color="#009D7BFF" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Chat Bubble Body -->
+    <path android:pathData="M60,25H20C17.8,25 16,26.8 16,29V55L28,47H60C62.2,47 64,45.2 64,43V29C64,26.8 62.2,25 60,25Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:startX="16" android:startY="25" android:endX="64" android:endY="55" android:type="linear">
+                <item android:color="#FF9D7BFF" android:offset="0" />
+                <item android:color="#FF7B61FF" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Internal Lines -->
+    <path android:fillColor="#4DFFFFFF" android:pathData="M25,32H55V35H25V32ZM25,39H45V42H25V39Z" />
+</vector>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer Glow/Shadow -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#1A000000" />
+            <size android:width="16dp" android:height="14dp" />
+        </shape>
+    </item>
+
+    <!-- Main Luminous Body -->
+    <item android:bottom="1dp" android:right="1dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#F2FFFFFF"
+                android:centerColor="#CCFFFFFF"
+                android:endColor="#E6FFFFFF"
+                android:angle="135" />
+            <stroke
+                android:width="1.2dp"
+                android:color="#FFFFFF" />
+            <size android:width="14dp" android:height="14dp" />
+        </shape>
+    </item>
+
+    <!-- Top Gloss Shine -->
+    <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="8dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#B3FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:angle="270" />
+        </shape>
+    </item>
+</layer-list>

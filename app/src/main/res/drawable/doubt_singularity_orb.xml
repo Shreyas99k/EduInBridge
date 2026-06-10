@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer Deep Space Bloom -->
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="150dp"
+                android:startColor="#4D4F46E5"
+                android:endColor="#004F46E5" />
+        </shape>
+    </item>
+    <!-- Secondary Atmospheric Glow -->
+    <item android:top="20dp" android:left="20dp" android:right="20dp" android:bottom="20dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="100dp"
+                android:startColor="#660EA5E9"
+                android:endColor="#000EA5E9" />
+        </shape>
+    </item>
+    <!-- The Glass Core -->
+    <item android:top="40dp" android:left="40dp" android:right="40dp" android:bottom="40dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#CCFFFFFF"
+                android:centerColor="#E64F46E5"
+                android:endColor="#FF0EA5E9"
+                android:angle="135" />
+            <stroke android:width="2dp" android:color="#FFFFFF" />
+        </shape>
+    </item>
+    <!-- High-Gloss Specular Shine -->
+    <item android:top="45dp" android:left="55dp" android:right="55dp" android:bottom="100dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#B3FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:angle="270" />
+        </shape>
+    </item>
+</layer-list>

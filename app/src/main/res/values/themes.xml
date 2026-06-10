@@ -1,0 +1,73 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme (Ultra Clean v3.0) -->
+    <style name="Theme.EduInBridge" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Core Colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Backgrounds -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/surface</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Component Styles -->
+        <item name="materialCardViewStyle">@style/Widget.EduInBridge.CardView</item>
+        <item name="textInputStyle">@style/Widget.EduInBridge.TextInputLayout</item>
+        <item name="materialButtonStyle">@style/Widget.EduInBridge.Button</item>
+    </style>
+
+    <!-- Professional Card: Thin border instead of heavy shadows -->
+    <style name="Widget.EduInBridge.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="strokeColor">@color/border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <!-- Clean Input Fields -->
+    <style name="Widget.EduInBridge.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/border</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintTextColor">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_muted</item>
+    </style>
+
+    <!-- Minimalist Button -->
+    <style name="Widget.EduInBridge.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">12dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Theme for Auth Screens (Still light, but might need different status bar handling) -->
+    <style name="Theme.EduInBridge.Auth" parent="Theme.EduInBridge">
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <!-- Chat Bubble Overlay -->
+    <style name="ShapeAppearanceOverlay.EduInBridge.ChatSent" parent="">
+        <item name="cornerSize">16dp</item>
+        <item name="cornerSizeTopRight">4dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.EduInBridge.ChatReceived" parent="">
+        <item name="cornerSize">16dp</item>
+        <item name="cornerSizeTopLeft">4dp</item>
+    </style>
+</resources>

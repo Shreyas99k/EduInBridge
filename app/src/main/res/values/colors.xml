@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ultra Clean Brand Identity - EduInBridge -->
+    <color name="primary">#2563EB</color>
+    <color name="primary_light">#DBEAFE</color>
+    <color name="secondary">#7C3AED</color>
+
+    <!-- Backgrounds & Surfaces -->
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F8FAFC</color>
+    <color name="surface_variant">#F1F5F9</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_muted">#94A3B8</color>
+
+    <!-- Borders & Dividers -->
+    <color name="border">#E2E8F0</color>
+    <color name="divider">#F1F5F9</color>
+
+    <!-- Functional Colors -->
+    <color name="success">#10B981</color>
+    <color name="error">#EF4444</color>
+    <color name="warning">#F59E0B</color>
+    <color name="info">#3B82F6</color>
+
+    <!-- Base Colors -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Action Gradients (Subtle) -->
+    <color name="gradient_start">#2563EB</color>
+    <color name="gradient_end">#3B82F6</color>
+
+    <!-- Compatibility Mappings -->
+    <color name="accent_secondary">@color/secondary</color>
+    <color name="text_white_70">#B3FFFFFF</color>
+    <color name="text_white_50">#80FFFFFF</color>
+    <color name="bg_dark">#FFFFFF</color>
+    <color name="bg_dark_secondary">#F8FAFC</color>
+    <color name="glass_white_10">#0D000000</color>
+    <color name="glass_light_stroke">#E2E8F0</color>
+
+    <!-- Missing Colors -->
+    <color name="accent_orange">#F97316</color>
+    <color name="error_red">#EF4444</color>
+</resources>

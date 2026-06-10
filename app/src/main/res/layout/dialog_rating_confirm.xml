@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ultra_glass_bg"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share Feedback"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:letterSpacing="-0.02"/>
+
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Your rating helps mentors improve the learning experience."
+        android:textColor="#80333333"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!-- Unique Soft Frost Button -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCancel"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#1A000000"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="LATER"
+                android:background="@android:color/transparent"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:letterSpacing="0.1" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Unique Vibrant Mint Button -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSubmit"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#80CBC4"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="1.5dp"
+            app:strokeColor="#FFFFFF">
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="CONFIRM"
+                android:background="@android:color/transparent"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:letterSpacing="0.1" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</LinearLayout>

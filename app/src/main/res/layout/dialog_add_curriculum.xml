@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    app:cardBackgroundColor="#1A1A1A"
+    app:cardCornerRadius="32dp"
+    app:cardElevation="12dp"
+    app:strokeColor="#33FFFFFF"
+    app:strokeWidth="1.5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:background="#33FFFFFF"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/txtAddTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD DEPARTMENT"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editNewItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColor="#FFFFFF"
+                android:hint="Enter name..."
+                android:textColorHint="#4DFFFFFF"
+                android:paddingVertical="16dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitAdd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:text="CONFIRM ENTRY"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            app:backgroundTint="#9D7BFF"
+            app:cornerRadius="30dp"
+            app:elevation="4dp" />
+
+        <TextView
+            android:id="@+id/btnCancelAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="CANCEL"
+            android:textColor="#80FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

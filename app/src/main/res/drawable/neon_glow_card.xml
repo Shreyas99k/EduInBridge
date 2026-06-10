@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The Outer Shadow/Glow -->
+    <item>
+        <shape>
+            <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
+            <solid android:color="#0D000000" />
+            <corners android:radius="44dp" />
+        </shape>
+    </item>
+    <!-- The Rim Light (Inner Glow) -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#4DFFFFFF"
+                android:endColor="#00FFFFFF"
+                android:angle="135" />
+            <corners android:radius="40dp" />
+        </shape>
+    </item>
+    <!-- The Actual Glass Surface -->
+    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+        <shape>
+            <solid android:color="#B3FFFFFF" />
+            <stroke android:width="1.5dp" android:color="#FFFFFF" />
+            <corners android:radius="38dp" />
+        </shape>
+    </item>
+</layer-list>

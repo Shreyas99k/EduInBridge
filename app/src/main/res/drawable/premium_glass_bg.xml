@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer Bloom Glow -->
+    <item android:top="8dp" android:left="8dp" android:right="8dp" android:bottom="8dp">
+        <shape>
+            <solid android:color="#0D000000" />
+            <corners android:radius="40dp" />
+        </shape>
+    </item>
+
+    <!-- Crystal Base (High Transparency) -->
+    <item android:bottom="2dp" android:right="2dp">
+        <shape>
+            <gradient
+                android:startColor="#D9FFFFFF"
+                android:centerColor="#B3FFFFFF"
+                android:endColor="#CCFFFFFF"
+                android:angle="135" />
+            <stroke
+                android:width="1.5dp"
+                android:color="#4DFFFFFF" />
+            <corners android:radius="40dp" />
+        </shape>
+    </item>
+
+    <!-- High-Gloss Specular Highlight (Rim Light) -->
+    <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="130dp">
+        <shape>
+            <gradient
+                android:startColor="#FFFFFFFF"
+                android:endColor="#00FFFFFF"
+                android:angle="270" />
+            <corners android:radius="40dp" />
+        </shape>
+    </item>
+</layer-list>

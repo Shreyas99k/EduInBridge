@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardBackgroundColor="#26000000"
+    app:cardCornerRadius="40dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#4DFFFFFF"
+    app:strokeWidth="1.5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center">
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            android:background="#33FFFFFF"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MENTOR PROFILE"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Specify your domain expertise"
+            android:textColor="#B3FFFFFF"
+            android:textSize="12sp"
+            android:letterSpacing="0.05"
+            android:textAllCaps="true" />
+
+        <!-- Selectable Branch Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTeacherBranch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="Select Branches (Multiple)"
+            app:hintTextColor="#80FFFFFF"
+            app:boxBackgroundMode="none"
+            app:startIconDrawable="@android:drawable/ic_menu_sort_by_size"
+            app:startIconTint="#9D7BFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTeacherBranch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="12dp"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Subjects Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Core Subjects"
+            app:hintTextColor="#80FFFFFF"
+            app:boxBackgroundMode="none"
+            app:startIconDrawable="@android:drawable/ic_menu_edit"
+            app:startIconTint="#9D7BFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTeacherSubjects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="12dp"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitDetails"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="48dp"
+            android:text="FINALIZE REGISTRATION"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            app:backgroundTint="#9D7BFF"
+            app:cornerRadius="32dp"
+            app:elevation="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="PENDING APPROVAL REQUIRED"
+            android:textColor="#4DFFFFFF"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

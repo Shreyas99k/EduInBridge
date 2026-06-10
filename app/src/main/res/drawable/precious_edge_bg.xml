@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 1. Ambient Glow Shadow (Soft Depth) -->
+    <item>
+        <shape>
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+            <solid android:color="#0A000000" />
+            <corners android:radius="44dp" />
+        </shape>
+    </item>
+
+    <!-- 2. Strong Bottom-Right Shadow (Realistic Lighting) -->
+    <item android:left="6dp" android:top="6dp">
+        <shape>
+            <solid android:color="#12000000" />
+            <corners android:radius="44dp" />
+        </shape>
+    </item>
+
+    <!-- 3. Primary Crystal Body -->
+    <item android:bottom="2dp" android:right="2dp">
+        <shape>
+            <gradient
+                android:angle="135"
+                android:centerColor="#E6FFFFFF"
+                android:endColor="#CCFFFFFF"
+                android:startColor="#F9FFFFFF" />
+            <!-- High-Precision White Rim -->
+            <stroke
+                android:width="1.5dp"
+                android:color="#FFFFFF" />
+            <corners android:radius="44dp" />
+        </shape>
+    </item>
+
+    <!-- 4. Top-Left Light Catch (The "Shine") -->
+    <item android:bottom="140dp" android:left="25dp" android:right="25dp" android:top="2dp">
+        <shape>
+            <gradient
+                android:angle="270"
+                android:endColor="#00FFFFFF"
+                android:startColor="#80FFFFFF" />
+            <corners android:radius="44dp" />
+        </shape>
+    </item>
+</layer-list>

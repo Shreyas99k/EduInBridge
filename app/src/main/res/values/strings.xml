@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">EduInBridge</string>
+    <string name="welcome_back">Welcome Back,</string>
+    <string name="login_title">Welcome Back</string>
+    <string name="signup_title">Create Account</string>
+    <string name="uploading_label">Uploading %1$s</string>
+    <string name="welcome_message">Welcome Back, %1$s!</string>
+    <string name="percent_format">%1$d%%</string>
+    <string name="notifications">Notifications</string>
+    <string name="avatar">Avatar</string>
+    <string name="ready_to_learn">Ready to learn?</string>
+    <string name="tagline">Bridging Education, Empowering Futures</string>
+
+    <string name="forgot_password_title">Account Recovery</string>
+    <string name="forgot_password_subtitle">Don\'t worry! We\'ll help you get back into your account in three easy steps.</string>
+    <string name="step_email">Email</string>
+    <string name="step_verify">Verify</string>
+    <string name="step_secure">Secure</string>
+    <string name="email_hint">Email Address</string>
+    <string name="request_code">Request Security Code</string>
+    <string name="otp_hint">4-Digit Code</string>
+    <string name="verify_secure">Verify &amp; Secure</string>
+    <string name="new_password_hint">New Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="finalize_reset">Finalize Reset</string>
+    <string name="return_to_signin">Return to Sign In</string>
+    <string name="invalid_email">Please enter a valid email address</string>
+    <string name="otp_sent">OTP sent successfully</string>
+    <string name="otp_error">Incorrect verification code</string>
+    <string name="password_length_error">Password must be at least 6 characters</string>
+    <string name="password_mismatch">Passwords do not match</string>
+    <string name="password_updated">Password updated successfully!</string>
+    <string name="step_verify_subtitle">Verify the 4-digit code sent to\n%1$s</string>
+    <string name="step_secure_subtitle">Choose a strong password for your account</string>
+    <string name="sending">Sending...</string>
+    <string name="updating">Updating...</string>
+
+    <string-array name="subjects_array">
+        <item>Programming in C++</item>
+        <item>Data Structures</item>
+        <item>Java Development</item>
+        <item>Python Scripting</item>
+        <item>Database Systems</item>
+        <item>R-Programming</item>
+        <item>Designing And Analysis Of Algorithm</item>
+        <item>php</item>
+        <item>Mathematics</item>
+        <item>Physics</item>
+    </string-array>
+</resources>

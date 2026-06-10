@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Atmospheric Aura (Solved) -->
+    <item>
+        <shape android:shape="oval">
+            <padding android:bottom="6dp" android:left="6dp" android:right="6dp" android:top="6dp" />
+            <gradient
+                android:type="radial"
+                android:gradientRadius="40dp"
+                android:startColor="#2600E676"
+                android:endColor="#0000E676" />
+        </shape>
+    </item>
+    <!-- Core Glow -->
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="1.5dp" android:color="#8000E676" />
+        </shape>
+    </item>
+</layer-list>

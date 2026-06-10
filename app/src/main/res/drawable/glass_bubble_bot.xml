@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Main Frosted Glass Base -->
+    <item>
+        <shape>
+            <solid android:color="#F2FFFFFF" />
+            <stroke android:width="1.5dp" android:color="#33000000" />
+            <corners android:topLeftRadius="4dp" android:bottomLeftRadius="24dp" android:bottomRightRadius="24dp" android:topRightRadius="24dp" />
+        </shape>
+    </item>
+</layer-list>

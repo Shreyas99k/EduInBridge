@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Sent Message Shimmer -->
+    <View
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/glass_chip_bg"
+        android:alpha="0.3" />
+
+    <!-- Received Message Shimmer -->
+    <View
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:layout_gravity="start"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/glass_chip_bg"
+        android:alpha="0.2" />
+
+    <!-- Sent Message Shimmer -->
+    <View
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/glass_chip_bg"
+        android:alpha="0.3" />
+
+</LinearLayout>

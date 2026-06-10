@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base Gradient -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#F8F9FF"
+                android:centerColor="#F0F4FF"
+                android:endColor="#FFFFFF"
+                android:angle="135" />
+        </shape>
+    </item>
+
+    <!-- Top Left Aurora Blob -->
+    <item android:right="200dp" android:bottom="500dp" android:left="-100dp" android:top="-100dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="400dp"
+                android:startColor="#339D7BFF"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+
+    <!-- Bottom Right Aurora Blob -->
+    <item android:left="200dp" android:top="400dp" android:right="-100dp" android:bottom="-100dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="400dp"
+                android:startColor="#3381D4FA"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+</layer-list>
